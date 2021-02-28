@@ -2217,6 +2217,7 @@ locale.
 .. configuration-block::
 
     .. code-block:: yaml
+
         # config/routes/annotations.yaml
         controllers:
             resource: '../../src/Controller/'
@@ -2224,7 +2225,9 @@ locale.
             host:
                 en: 'https://www.symfony.com'
                 nl: 'https://www.symfony.nl'
+
     .. code-block:: xml
+
         <!-- config/routes/annotations.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <routes xmlns="http://symfony.com/schema/routing"
@@ -2236,7 +2239,9 @@ locale.
                 <host locale="nl">https://www.symfony.nl</host>
             </import>
         </routes>
+
     .. code-block:: php
+
         // config/routes/annotations.php
         use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
         return function (RoutingConfigurator $routes) {
