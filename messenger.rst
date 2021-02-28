@@ -1102,7 +1102,7 @@ auto_setup          Whether the table should be created
     in Symfony 5.1
 
 When using PostgreSQL, you have access to the following options
-to leverage the [LISTEN/NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html)
+to leverage the `LISTEN/NOTIFY`_
 feature. This allow for a more performant approach than the default polling behavior
 of the Doctrine transport because PostgreSQL will directly notify the workers when a
 new message is inserted in the table.
@@ -1994,3 +1994,4 @@ Learn more
 .. _`Long polling`: https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-short-and-long-polling.html
 .. _`Visibility Timeout`: https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html
 .. _`FIFO queue`: https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html
+.. _`LISTEN/NOTIFY`: https://www.postgresql.org/docs/current/sql-notify.html
