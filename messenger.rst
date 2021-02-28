@@ -1103,7 +1103,7 @@ auto_setup          Whether the table should be created
 
 When using PostgreSQL, you have access to the following options
 to leverage the [LISTEN/NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html)
-feature. This allow for a more performant approach than the default polling behaviour
+feature. This allow for a more performant approach than the default polling behavior
 of the Doctrine transport because PostgreSQL will directly notify the workers when a
 new message is inserted in the table.
 
