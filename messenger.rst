@@ -1096,6 +1096,29 @@ auto_setup          Whether the table should be created
                     automatically during send / get.       true
 ==================  =====================================  ======================
 
+.. versionadded:: 5.1
+
+    The ability to leverage PostgreSQL's LISTEN/NOTIFY was introduced
+    in Symfony 5.1
+
+When using PostgreSQL, you have access to the following options
+to leverage the [LISTEN/NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html)
+feature. This allow for a more performant approach than the default polling behaviour
+of the Doctrine transport because PostgreSQL will directly notify the workers when a
+new message is inserted in the table.
+
+=======================  =====================================  ======================
+     Option                  Description                            Default
+=======================  =====================================  ======================
+use_notify               Whether to use LISTEN/NOTIFY.          true
+check_delayed_interval   The interval to check for delayed      1000
+                         messages, in milliseconds.
+                         Set to 0 to disable checks.
+get_notify_timeout       The length of time to wait for a       0
+                         response when calling
+                         PDO::pgsqlGetNotify, in milliseconds.
+=======================  =====================================  ======================
+
 Beanstalkd Transport
 ~~~~~~~~~~~~~~~~~~~~
 
